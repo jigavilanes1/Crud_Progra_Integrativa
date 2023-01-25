@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>PROGRA ITERATIVA</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+</head>
+<body>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+	<!--<button class="btn btn-primary" type="button" id="copiar">Enviar</button>
+	<button class="btn btn-dark" type="button" id="imprimir" onclick="imprimir();">Imprimir</button>
+	-->
+	<a href="../index.php" class="btn btn-primary" data-toggle="modal"><span class="fa fa-plus"></span> Regresar</a>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-sm-12 col-md-6 col-lg-6">
+				<h3>Nuevo Usuario</h3>
+
+				<div class="d-flex justify-content-center mt-4">
+					
+					<form name="form1" action="../php/guardarUsuario.php" id="form1" method="post" >
+						<formulario-persona></formulario-persona>
+					</form>
+					
+				</div>
+			</div>
+		</div>
+
+
+
+	</div>
+	<template id="form">
+		<div class="form-group">
+			<crear-label nombre="Codigo"></crear-label>
+			<crear-input inpu="codigo"></crear-input>
+		</div>
+		<div class="form-group">
+			<crear-label nombre="Nombres"></crear-label>
+			<crear-input inpu="nombre"></crear-input>
+		</div>
+		<div class="form-group">
+			<crear-label nombre="Apellidos"></crear-label>
+			<crear-input inpu="apellido"></crear-input>
+		</div>
+		<div class="form-group">
+			<crear-label nombre="Cedula"></crear-label>
+			<input class="form-control" type="text" name="cedula"  maxlength="10" required>
+		</div>
+		<div class="form-group">
+			<crear-label nombre="Genero"></crear-label>
+			<select class="form-control" name="genero" id="inputGen">
+				<option value="">----</option>
+				<option value="Masculino">Masculino</option>
+				<option value="Femenino">Femenino</option>
+			</select>
+		</div>
+		<div class="form-group">
+			<crear-label nombre="Año de nacimiento"></crear-label>
+			<crear-inputdate inpu="nacido"></crear-inputdate>
+		</div>
+		<div class="form-group">
+			<crear-label nombre="Edad"></crear-label>
+			<crear-inputnumber inpu="edad"></crear-inputnumber>
+		</div>
+		<div class="form-group">
+			<br>
+			<button type="submit" class="btn btn-primary">Enviar</button>
+			<input class="btn btn-danger" type="reset" value="Borrar">
+			<p id="caja"></p>
+		</div>
+	</template>
+	<script type="text/javascript" src="../js/custom.js"></script>
+	<script type="text/javascript" src="../js/label.js"></script>
+	<script type="text/javascript" src="../js/input.js"></script>
+	<script type="text/javascript" src="../js/input_number.js"></script>
+	<script type="text/javascript" src="../js/input_date.js"></script>
+	<script type="text/javascript" src="../js/form.js"></script>
+</body>
+</html>
